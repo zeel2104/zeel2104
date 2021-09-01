@@ -1,5 +1,5 @@
 ### Hi there! This is Zeel 👋
-![counter](https://[YOUR_ENDPOINT].m.pipedream.net)
+![](https://komarev.com/ghpvc/?username=zeel2104)
 
 - 🔭 I’m currently working on full stack web development and improving my problem solving skills
 - 🌱 I’m currently learning data structures and algorithms and machine learning algorithms
