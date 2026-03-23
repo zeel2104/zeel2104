@@ -5,29 +5,37 @@ USERNAME = "zeel2104"
 README_PATH = "README.md"
 GITHUB_API = "https://api.github.com/search/issues"
 
-# Query for merged PRs
 query = f"author:{USERNAME} is:pr is:merged"
 
-headers = {
-    "Authorization": f"token {os.environ['GITHUB_TOKEN']}"
-}
+headers = {"Authorization": f"token {os.environ['GITHUB_TOKEN']}"}
 
-response = requests.get(GITHUB_API, headers=headers, params={"q": query, "per_page": 10})
+response = requests.get(GITHUB_API, headers=headers, params={"q": query, "per_page": 100})
 data = response.json()
 
-pr_lines = []
+top_companies = ["microsoft", "nvidia", "google"]
+
+top_prs = []
+other_prs = []
+
 for item in data.get("items", []):
-    repo_name = item["repository_url"].split("/")[-1]
+    repo_name = item["repository_url"].replace("https://api.github.com/repos/", "")
     pr_number = item["number"]
     title = item["title"]
     url = item["html_url"]
-    pr_lines.append(f"- 🟦 **{repo_name}** — PR #{pr_number}: [{title}]({url})")
+
+    line = f"- 🟦 **{repo_name}** — PR #{pr_number}: [{title}]({url})"
+
+    if any(c in repo_name.lower() for c in top_companies):
+        top_prs.append(line)
+    else:
+        other_prs.append(line)
+
+pr_lines = top_prs + other_prs
 
 # Read README
 with open(README_PATH, "r", encoding="utf-8") as f:
     content = f.read()
 
-# Replace the placeholder
 start_tag = "<!-- START OPEN SOURCE LIST -->"
 end_tag = "<!-- END OPEN SOURCE LIST -->"
 new_section = start_tag + "\n" + "\n".join(pr_lines) + "\n" + end_tag
