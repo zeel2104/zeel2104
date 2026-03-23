@@ -1,39 +1,34 @@
-import requests
-import os
+name: Update Open Source Contributions
 
-USERNAME = "zeel2104"
-README_PATH = "README.md"
-GITHUB_API = "https://api.github.com/search/issues"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
 
-token = os.environ.get("PAT_TOKEN")
-headers = {"Authorization": f"token {token}"} if token else {}
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-query = f"author:{USERNAME} is:pr is:merged"
-response = requests.get(GITHUB_API, headers=headers, params={"q": query, "per_page": 100})
-data = response.json()
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-# Build PR list
-pr_lines = []
-for item in data.get("items", []):
-    repo_name = item["repository_url"].replace("https://api.github.com/repos/", "")
-    pr_number = item["number"]
-    title = item["title"]
-    url = item["html_url"]
-    pr_lines.append(f"- 🟦 **{repo_name}** — PR #{pr_number}: [{title}]({url})")
+      - name: Install dependencies
+        run: pip install requests
 
-# Read README
-with open(README_PATH, "r", encoding="utf-8") as f:
-    content = f.read()
+      - name: Run script
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: python update_readme.py
 
-start_tag = "<!-- START OPEN SOURCE LIST -->"
-end_tag = "<!-- END OPEN SOURCE LIST -->"
-
-if start_tag in content and end_tag in content:
-    new_section = start_tag + "\n" + "\n".join(pr_lines) + "\n" + end_tag
-    content = content.split(start_tag)[0] + new_section + content.split(end_tag)[1]
-
-    with open(README_PATH, "w", encoding="utf-8") as f:
-        f.write(content)
-    print("✅ README updated with merged PRs!")
-else:
-    print("❌ Placeholder tags not found in README.md")
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README with merged PRs" || echo "No changes"
+          git push
