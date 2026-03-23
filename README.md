@@ -19,14 +19,6 @@
 <!-- END OPEN SOURCE LIST -->
 
 
-## 🌟 Open Source Contributions 1
-
-### 🟦 Microsoft — Agent Governance Toolkit
-- ✅ Merged PR #326  
-- 🔧 Improved **[add what you did here — bug fix / feature / docs]**  
-- 🔗 https://github.com/microsoft/agent-governance-toolkit/pull/326  
-
----
 
 ## 🛠️ Tech Stack
 - 💻 Languages: Java, Python, JavaScript  
