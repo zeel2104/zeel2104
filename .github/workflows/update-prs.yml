@@ -1,13 +1,14 @@
 name: Update Open Source Contributions
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:    # Manual trigger
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 12 * * *'  # Daily at 12:00 UTC
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,10 +21,52 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run script
+      - name: Update README with merged PRs
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: python update_readme.py
+          GITHUB_USERNAME: zeel2104
+          README_PATH: README.md
+        run: |
+          python - <<'END'
+          import os
+          import requests
+
+          username = os.environ["GITHUB_USERNAME"]
+          readme_path = os.environ["README_PATH"]
+          token = os.environ.get("PAT_TOKEN")
+          headers = {"Authorization": f"token {token}"} if token else {}
+
+          # Fetch merged PRs
+          url = "https://api.github.com/search/issues"
+          query = f"author:{username} is:pr is:merged"
+          response = requests.get(url, headers=headers, params={"q": query, "per_page": 100})
+          data = response.json()
+
+          pr_lines = []
+          for item in data.get("items", []):
+              repo_name = item["repository_url"].replace("https://api.github.com/repos/", "")
+              pr_number = item["number"]
+              title = item["title"]
+              html_url = item["html_url"]
+              pr_lines.append(f"- 🟦 **{repo_name}** — PR #{pr_number}: [{title}]({html_url})")
+
+          # Update README
+          with open(readme_path, "r", encoding="utf-8") as f:
+              content = f.read()
+
+          start_tag = "<!-- START OPEN SOURCE LIST -->"
+          end_tag = "<!-- END OPEN SOURCE LIST -->"
+
+          if start_tag in content and end_tag in content:
+              new_section = start_tag + "\n" + "\n".join(pr_lines) + "\n" + end_tag
+              content = content.split(start_tag)[0] + new_section + content.split(end_tag)[1]
+
+              with open(readme_path, "w", encoding="utf-8") as f:
+                  f.write(content)
+              print("✅ README updated with merged PRs!")
+          else:
+              print("❌ Placeholder tags not found in README.md")
+          END
 
       - name: Commit and push changes
         run: |
