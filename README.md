@@ -16,6 +16,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #326: [feat: add policy evaluation heatmap to SRE dashboard (#309)](https://github.com/microsoft/agent-governance-toolkit/pull/326)
 - 🟦 **ClanGenOfficial/clangen** — PR #4563: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - 🟦 **elevchyt/spritelite** — PR #7: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
