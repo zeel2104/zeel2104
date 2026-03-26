@@ -16,8 +16,11 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **aponysus/redress** — PR #74: [test: add smoke coverage for decorator docs snippet#71](https://github.com/aponysus/redress/pull/74)
+- 🟦 **alexeev-prog/nadzoring** — PR #64: [Improve error messages with actionable suggestions #46](https://github.com/alexeev-prog/nadzoring/pull/64)
 - 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #326: [feat: add policy evaluation heatmap to SRE dashboard (#309)](https://github.com/microsoft/agent-governance-toolkit/pull/326)
+- 🟦 **AcademySoftwareFoundation/MaterialX** — PR #2831: [Fix blackbody node to support temperatures down to 800K](https://github.com/AcademySoftwareFoundation/MaterialX/pull/2831)
 - 🟦 **ClanGenOfficial/clangen** — PR #4563: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - 🟦 **elevchyt/spritelite** — PR #7: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
 <!-- END OPEN SOURCE LIST -->
