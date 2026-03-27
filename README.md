@@ -16,6 +16,8 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **opensearch-project/opensearch-prometheus-exporter** — PR #485: [Fix missing javadoc warnings (#482)](https://github.com/opensearch-project/opensearch-prometheus-exporter/pull/485)
+- 🟦 **microsoft/hve-core** — PR #1206: [fix: validate-installation scripts now check .github/skills directory (#1010)](https://github.com/microsoft/hve-core/pull/1206)
 - 🟦 **aponysus/redress** — PR #74: [test: add smoke coverage for decorator docs snippet#71](https://github.com/aponysus/redress/pull/74)
 - 🟦 **alexeev-prog/nadzoring** — PR #64: [Improve error messages with actionable suggestions #46](https://github.com/alexeev-prog/nadzoring/pull/64)
 - 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
