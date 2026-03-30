@@ -1,14 +1,3 @@
-### Hi there! I'm Zeel Desai 👋  
-![](https://komarev.com/ghpvc/?username=zeel2104)
-
----
-
-## 🚀 About Me
-- 🔭 Working on **Full Stack Development + AI/ML Projects**
-- 🌱 Learning **Data Structures & Algorithms + Machine Learning**
-- 👯 Open to collaborating on **Web & AI Projects**
-- 💬 Ask me about **Development, APIs, or ML**
-- 📫 Reach me at: **desaizeel2128@gmail.com**
 
 ---
 <h1 align="center">Hi 👋, I'm Zeel Desai</h1>
@@ -17,6 +6,16 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=zeel2104&label=Profile%20views&color=0e75b6&style=flat" />
 </p>
+
+
+## 🚀 About Me
+- 🧠 I build **AI-driven applications** that turn data into real-world insights  
+- ⚙️ Strong focus on **scalable backend systems & APIs**  
+- 🌱 Currently deep diving into **DSA + Machine Learning + System Design**  
+- 🤝 Contributing to **large-scale open source projects (Microsoft, OpenSearch, etc.)**  
+- 💡 Interested in **GenAI, vector search, and distributed systems**  
+
+---
 
 
 ## 🌟 Open Source Contributions
@@ -35,7 +34,8 @@
 - 🟦 **ClanGenOfficial/clangen** — PR #4563: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - 🟦 **elevchyt/spritelite** — PR #7: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
 <!-- END OPEN SOURCE LIST -->
-
+📌 10+ PRs merged across impactful repositories  
+📌 Focus: **backend reliability, testing, developer tooling**
 
 
 ## 🛠️ Tech Stack
