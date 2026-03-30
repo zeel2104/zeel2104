@@ -41,10 +41,9 @@
 ---
 
 ## 📊 GitHub Stats
-<img src="https://github-readme-stats.vercel.app/api?username=zeel2104&show_icons=true&theme=dark" />
+<img src="https://github-readme-stats.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight&cache_seconds=86400" />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeel2104&theme=dark&hide_langs_below=1" />
-
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeel2104&layout=compact&theme=tokyonight" />
 ---
 
 ## ⚡ Fun Fact
