@@ -52,5 +52,21 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeel2104&layout=compact&theme=tokyonight" />
 ---
 
+---
+
+## ⚡ What Sets Me Apart
+- 🚀 Not just building projects but contributing to **production-grade open source**
+- 🔍 Strong in **debugging, system understanding, and improving existing codebases**
+- 🧩 Blend of **AI + backend engineering**
+
+---
+
+## 📫 Let’s Connect
+- 📧 **desaizeel2128@gmail.com**
+- 💼 Open to **Software Engineering / AI/ML roles**
+- 🌐 Always up for **collaborations & impactful projects**
+
+---
+
 ## ⚡ Fun Fact
-I love building impactful tech and contributing to real-world projects 🌍
+I am a black belt in Taekwondo** ⚡
