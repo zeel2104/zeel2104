@@ -75,6 +75,8 @@
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=zeel2104&theme=tokyonight" />
 </p>
+
+<img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight" />
 ---
 
 ---
