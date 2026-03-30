@@ -3,7 +3,7 @@
 <h1 align="center">Hi 👋, I'm Zeel Desai</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=800&color=00F7FF&center=true&vCenter=true&width=600&lines=AI+%2B+Full+Stack+Engineer;Building+Scalable+Systems;Open+Source+Contributor;Turning+Ideas+into+Impact" />
+ <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=800&color=7F5AF0&center=true&vCenter=true&width=600&lines=AI+%2B+Full+Stack+Engineer;Building+Scalable+Systems;Open+Source+Contributor;Turning+Ideas+into+Impact" />
 </p>
 
 <h3 align="center">Building AI-powered systems & scalable web applications</h3>
@@ -52,9 +52,13 @@
 ---
 
 ## 📊 GitHub Stats
-<img src="https://github-readme-stats.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight&cache_seconds=86400" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeel2104&layout=compact&theme=tokyonight" />
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight&cache_seconds=86400" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeel2104&layout=compact&theme=tokyonight" />
+  <br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=zeel2104&theme=tokyonight" />
+</p>
 ---
 
 ---
