@@ -43,6 +43,18 @@
 📌 Focus: **backend reliability, testing, developer tooling**
 
 
+
+---
+
+## 🐍 GitHub Activity
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zeel2104/zeel2104/output/github-contribution-grid-snake.svg" />
+</p>
+
+---
+
+
 ## 🛠️ Tech Stack
 - 💻 Languages: Java, Python, JavaScript  
 - 🌐 Web: React, Node.js, REST APIs  
