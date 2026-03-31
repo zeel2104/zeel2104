@@ -26,6 +26,9 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **CodeGraphContext/CodeGraphContext** — PR #775: [Make graph node size scale with visible node count](https://github.com/CodeGraphContext/CodeGraphContext/pull/775)
+- 🟦 **microsoft/agent-governance-toolkit** — PR #593: [feat(chrome): add dark mode support to popup](https://github.com/microsoft/agent-governance-toolkit/pull/593)
+- 🟦 **microsoft/agent-governance-toolkit** — PR #592: [feat(vscode): improve accessibility for views and webviews](https://github.com/microsoft/agent-governance-toolkit/pull/592)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #565: [Feat/langchain scope chain verification](https://github.com/microsoft/agent-governance-toolkit/pull/565)
 - 🟦 **Tracer-Cloud/opensre** — PR #169: [test: strengthen wizard env and config sync coverage](https://github.com/Tracer-Cloud/opensre/pull/169)
 - 🟦 **opensearch-project/opensearch-prometheus-exporter** — PR #485: [Fix missing javadoc warnings (#482)](https://github.com/opensearch-project/opensearch-prometheus-exporter/pull/485)
