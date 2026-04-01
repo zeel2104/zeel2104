@@ -26,10 +26,12 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **hidai25/eval-view** — PR #147: [Add Discord webhook support to monitor](https://github.com/hidai25/eval-view/pull/147)
 - 🟦 **CodeGraphContext/CodeGraphContext** — PR #775: [Make graph node size scale with visible node count](https://github.com/CodeGraphContext/CodeGraphContext/pull/775)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #593: [feat(chrome): add dark mode support to popup](https://github.com/microsoft/agent-governance-toolkit/pull/593)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #592: [feat(vscode): improve accessibility for views and webviews](https://github.com/microsoft/agent-governance-toolkit/pull/592)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #565: [Feat/langchain scope chain verification](https://github.com/microsoft/agent-governance-toolkit/pull/565)
+- 🟦 **vllm-project/llm-compressor** — PR #2533: [Add GPTQ support for block quantization](https://github.com/vllm-project/llm-compressor/pull/2533)
 - 🟦 **Tracer-Cloud/opensre** — PR #169: [test: strengthen wizard env and config sync coverage](https://github.com/Tracer-Cloud/opensre/pull/169)
 - 🟦 **opensearch-project/opensearch-prometheus-exporter** — PR #485: [Fix missing javadoc warnings (#482)](https://github.com/opensearch-project/opensearch-prometheus-exporter/pull/485)
 - 🟦 **microsoft/hve-core** — PR #1206: [fix: validate-installation scripts now check .github/skills directory (#1010)](https://github.com/microsoft/hve-core/pull/1206)
