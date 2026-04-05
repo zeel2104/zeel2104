@@ -53,11 +53,7 @@
 
 ---
 
-## 🐍 GitHub Activity
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zeel2104/zeel2104/output/github-contribution-grid-snake.svg" />
-</p>
 
 ---
 
