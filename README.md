@@ -65,7 +65,7 @@
 - 🤖 AI/ML: Machine Learning, Data Analysis  
 
 ---
-
+<!--
 ## 📊 GitHub Stats
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight&cache_seconds=86400" />
@@ -81,6 +81,8 @@
 
 <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=zeel2104&show_icons=true&theme=tokyonight" />
 ---
+
+-->
 
 ---
 
