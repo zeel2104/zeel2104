@@ -41,6 +41,7 @@
 - 🟦 **aponysus/redress** — PR #74: [test: add smoke coverage for decorator docs snippet#71](https://github.com/aponysus/redress/pull/74)
 - 🟦 **alexeev-prog/nadzoring** — PR #64: [Improve error messages with actionable suggestions #46](https://github.com/alexeev-prog/nadzoring/pull/64)
 - 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
+- 🟦 **kaito-project/kaito** — PR #1870: [feat: add GPU spot instance support for Azure node pools #1837](https://github.com/kaito-project/kaito/pull/1870)
 - 🟦 **SasanLabs/VulnerableApp** — PR #541: [fix: add ping to Docker base image to fix Command Injection levels  (#540)](https://github.com/SasanLabs/VulnerableApp/pull/541)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #326: [feat: add policy evaluation heatmap to SRE dashboard (#309)](https://github.com/microsoft/agent-governance-toolkit/pull/326)
 - 🟦 **AARyzhkov/sauna** — PR #9: [Add Python type annotations to all modules (#8)](https://github.com/AARyzhkov/sauna/pull/9)
