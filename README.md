@@ -17,9 +17,8 @@
 - 🧠 I build **AI-driven applications** that turn data into real-world insights  
 - ⚙️ Strong focus on **scalable backend systems & APIs**  
 - 🌱 Currently deep diving into **DSA + Machine Learning + System Design**  
-- 🤝 Contributing to **large-scale open source projects (Nvidia, Microsoft, OpenSearch, etc.)**  
+- 🤝 Contributing to **large-scale open source projects (Nvidia, Microsoft, OpenSearch, vLLM etc.)**  
 - 💡 Interested in **GenAI, vector search, and distributed systems**  
-
 ---
 
 
