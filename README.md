@@ -25,6 +25,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **bitwize-music-studio/claude-ai-music-skills** — PR #262: [Log failed optional module imports in processing helpers](https://github.com/bitwize-music-studio/claude-ai-music-skills/pull/262)
 - 🟦 **NVIDIA-NeMo/Automodel** — PR #1644: [feat: add reasoning_content and tool-calling support to ChatDataset](https://github.com/NVIDIA-NeMo/Automodel/pull/1644)
 - 🟦 **hidai25/eval-view** — PR #147: [Add Discord webhook support to monitor](https://github.com/hidai25/eval-view/pull/147)
 - 🟦 **CodeGraphContext/CodeGraphContext** — PR #775: [Make graph node size scale with visible node count](https://github.com/CodeGraphContext/CodeGraphContext/pull/775)
