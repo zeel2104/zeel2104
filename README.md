@@ -25,6 +25,8 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **trustgraph-ai/trustgraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/trustgraph/pull/797)
+- 🟦 **apache/datafusion-python** — PR #1489: [Support None comparisons for null expressions](https://github.com/apache/datafusion-python/pull/1489)
 - 🟦 **bitwize-music-studio/claude-ai-music-skills** — PR #262: [Log failed optional module imports in processing helpers](https://github.com/bitwize-music-studio/claude-ai-music-skills/pull/262)
 - 🟦 **NVIDIA-NeMo/Automodel** — PR #1644: [feat: add reasoning_content and tool-calling support to ChatDataset](https://github.com/NVIDIA-NeMo/Automodel/pull/1644)
 - 🟦 **hidai25/eval-view** — PR #147: [Add Discord webhook support to monitor](https://github.com/hidai25/eval-view/pull/147)
