@@ -25,6 +25,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **pytorch/ignite** — PR #3737: [Use Ruff formatter in devcontainer config](https://github.com/pytorch/ignite/pull/3737)
 - 🟦 **trustgraph-ai/trustgraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/trustgraph/pull/797)
 - 🟦 **apache/datafusion-python** — PR #1489: [Support None comparisons for null expressions](https://github.com/apache/datafusion-python/pull/1489)
 - 🟦 **bitwize-music-studio/claude-ai-music-skills** — PR #262: [Log failed optional module imports in processing helpers](https://github.com/bitwize-music-studio/claude-ai-music-skills/pull/262)
