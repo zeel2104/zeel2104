@@ -53,7 +53,7 @@
 - 🟦 **ClanGenOfficial/clangen** — PR #4563: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - 🟦 **elevchyt/spritelite** — PR #7: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
 <!-- END OPEN SOURCE LIST -->
-📌 20+ PRs merged across impactful repositories  
+📌 25+ PRs merged across impactful repositories  
 📌 Focus: **backend reliability, testing, developer tooling**
 
 
