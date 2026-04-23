@@ -25,10 +25,12 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **qualcomm/eld** — PR #1093: [test: remove unnecessary target exclusions from RevisionInfo](https://github.com/qualcomm/eld/pull/1093)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #1209: [docs: add architecture video series links](https://github.com/microsoft/agent-governance-toolkit/pull/1209)
 - 🟦 **microsoft/apm** — PR #738: [fix: strip skills prefix from bare skill plugin export](https://github.com/microsoft/apm/pull/738)
 - 🟦 **pytorch/ignite** — PR #3737: [Use Ruff formatter in devcontainer config](https://github.com/pytorch/ignite/pull/3737)
 - 🟦 **trustgraph-ai/trustgraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/trustgraph/pull/797)
+- 🟦 **FreeCAD/FreeCAD** — PR #29325: [Sort installed mods list alphabetically](https://github.com/FreeCAD/FreeCAD/pull/29325)
 - 🟦 **apache/datafusion-python** — PR #1489: [Support None comparisons for null expressions](https://github.com/apache/datafusion-python/pull/1489)
 - 🟦 **bitwize-music-studio/claude-ai-music-skills** — PR #262: [Log failed optional module imports in processing helpers](https://github.com/bitwize-music-studio/claude-ai-music-skills/pull/262)
 - 🟦 **NVIDIA-NeMo/Automodel** — PR #1667: [docs: add SkyPilot Kubernetes tutorial](https://github.com/NVIDIA-NeMo/Automodel/pull/1667)
@@ -44,6 +46,7 @@
 - 🟦 **Tracer-Cloud/opensre** — PR #169: [test: strengthen wizard env and config sync coverage](https://github.com/Tracer-Cloud/opensre/pull/169)
 - 🟦 **opensearch-project/opensearch-prometheus-exporter** — PR #485: [Fix missing javadoc warnings (#482)](https://github.com/opensearch-project/opensearch-prometheus-exporter/pull/485)
 - 🟦 **microsoft/hve-core** — PR #1206: [fix: validate-installation scripts now check .github/skills directory (#1010)](https://github.com/microsoft/hve-core/pull/1206)
+- 🟦 **Team-Isaac-Polito/reseq_ros2** — PR #111: [Refactor Dockerfile.orin dependency layers #110](https://github.com/Team-Isaac-Polito/reseq_ros2/pull/111)
 - 🟦 **aponysus/redress** — PR #74: [test: add smoke coverage for decorator docs snippet#71](https://github.com/aponysus/redress/pull/74)
 - 🟦 **alexeev-prog/nadzoring** — PR #64: [Improve error messages with actionable suggestions #46](https://github.com/alexeev-prog/nadzoring/pull/64)
 - 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
