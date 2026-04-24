@@ -26,7 +26,9 @@
 
 <!-- START OPEN SOURCE LIST -->
 - 🟦 **qualcomm/eld** — PR #1093: [test: remove unnecessary target exclusions from RevisionInfo](https://github.com/qualcomm/eld/pull/1093)
+- 🟦 **PointCloudLibrary/pcl** — PR #6431: [registration: parallelize SAC-IA error metric with OpenMP](https://github.com/PointCloudLibrary/pcl/pull/6431)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #1209: [docs: add architecture video series links](https://github.com/microsoft/agent-governance-toolkit/pull/1209)
+- 🟦 **pytorch-ignite/examples** — PR #97: [Add setup_tb_logging example to getting started tutorial](https://github.com/pytorch-ignite/examples/pull/97)
 - 🟦 **microsoft/apm** — PR #738: [fix: strip skills prefix from bare skill plugin export](https://github.com/microsoft/apm/pull/738)
 - 🟦 **pytorch/ignite** — PR #3737: [Use Ruff formatter in devcontainer config](https://github.com/pytorch/ignite/pull/3737)
 - 🟦 **trustgraph-ai/trustgraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/trustgraph/pull/797)
