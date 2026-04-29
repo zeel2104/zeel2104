@@ -25,6 +25,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **NVIDIA/cuda-quantum** — PR #4395: [Fix observe broadcast fallback on REST QPU targets](https://github.com/NVIDIA/cuda-quantum/pull/4395)
 - 🟦 **qualcomm/PatchWise** — PR #78: [Agent: add git tools for AI to navigate commit history](https://github.com/qualcomm/PatchWise/pull/78)
 - 🟦 **qualcomm/eld** — PR #1093: [test: remove unnecessary target exclusions from RevisionInfo](https://github.com/qualcomm/eld/pull/1093)
 - 🟦 **PointCloudLibrary/pcl** — PR #6431: [registration: parallelize SAC-IA error metric with OpenMP](https://github.com/PointCloudLibrary/pcl/pull/6431)
