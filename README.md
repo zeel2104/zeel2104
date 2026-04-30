@@ -25,6 +25,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **IBM/mcp-context-forge** — PR #4506: [feat: add React loading page](https://github.com/IBM/mcp-context-forge/pull/4506)
 - 🟦 **NVIDIA/cuda-quantum** — PR #4395: [Fix observe broadcast fallback on REST QPU targets](https://github.com/NVIDIA/cuda-quantum/pull/4395)
 - 🟦 **qualcomm/PatchWise** — PR #78: [Agent: add git tools for AI to navigate commit history](https://github.com/qualcomm/PatchWise/pull/78)
 - 🟦 **qualcomm/eld** — PR #1093: [test: remove unnecessary target exclusions from RevisionInfo](https://github.com/qualcomm/eld/pull/1093)
@@ -52,10 +53,12 @@
 - 🟦 **microsoft/hve-core** — PR #1206: [fix: validate-installation scripts now check .github/skills directory (#1010)](https://github.com/microsoft/hve-core/pull/1206)
 - 🟦 **Team-Isaac-Polito/reseq_ros2** — PR #111: [Refactor Dockerfile.orin dependency layers #110](https://github.com/Team-Isaac-Polito/reseq_ros2/pull/111)
 - 🟦 **aponysus/redress** — PR #74: [test: add smoke coverage for decorator docs snippet#71](https://github.com/aponysus/redress/pull/74)
+- 🟦 **alexeev-prog/nadzoring** — PR #64: [Improve error messages with actionable suggestions #46](https://github.com/alexeev-prog/nadzoring/pull/64)
 - 🟦 **kaifcodec/user-scanner** — PR #308: [feat: add OpenStreetMap username validation module (#307)](https://github.com/kaifcodec/user-scanner/pull/308)
 - 🟦 **kaito-project/kaito** — PR #1870: [feat: add GPU spot instance support for Azure node pools #1837](https://github.com/kaito-project/kaito/pull/1870)
 - 🟦 **SasanLabs/VulnerableApp** — PR #541: [fix: add ping to Docker base image to fix Command Injection levels  (#540)](https://github.com/SasanLabs/VulnerableApp/pull/541)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #326: [feat: add policy evaluation heatmap to SRE dashboard (#309)](https://github.com/microsoft/agent-governance-toolkit/pull/326)
+- 🟦 **AARyzhkov/sauna** — PR #9: [Add Python type annotations to all modules (#8)](https://github.com/AARyzhkov/sauna/pull/9)
 - 🟦 **AcademySoftwareFoundation/MaterialX** — PR #2831: [Fix blackbody node to support temperatures down to 800K](https://github.com/AcademySoftwareFoundation/MaterialX/pull/2831)
 - 🟦 **ClanGenOfficial/clangen** — PR #4563: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - 🟦 **elevchyt/spritelite** — PR #7: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
