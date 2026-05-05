@@ -25,6 +25,8 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **vllm-project/llm-compressor** — PR #2682: [Use modules list for sequential epoch end](https://github.com/vllm-project/llm-compressor/pull/2682)
+- 🟦 **grafana/alloy-scenarios** — PR #120: [Add RabbitMQ monitoring scenario](https://github.com/grafana/alloy-scenarios/pull/120)
 - 🟦 **IBM/mcp-context-forge** — PR #4506: [feat: add React loading page](https://github.com/IBM/mcp-context-forge/pull/4506)
 - 🟦 **NVIDIA/cuda-quantum** — PR #4395: [Fix observe broadcast fallback on REST QPU targets](https://github.com/NVIDIA/cuda-quantum/pull/4395)
 - 🟦 **qualcomm/PatchWise** — PR #78: [Agent: add git tools for AI to navigate commit history](https://github.com/qualcomm/PatchWise/pull/78)
