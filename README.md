@@ -27,6 +27,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+- 🟦 **NVIDIA-NeMo/Automodel** — PR #2119: [feat(config): add example YAML linter](https://github.com/NVIDIA-NeMo/Automodel/pull/2119)
 - 🟦 **vllm-project/llm-compressor** — PR #2682: [Use modules list for sequential epoch end](https://github.com/vllm-project/llm-compressor/pull/2682)
 - 🟦 **grafana/alloy-scenarios** — PR #120: [Add RabbitMQ monitoring scenario](https://github.com/grafana/alloy-scenarios/pull/120)
 - 🟦 **IBM/mcp-context-forge** — PR #4506: [feat: add React loading page](https://github.com/IBM/mcp-context-forge/pull/4506)
