@@ -33,6 +33,7 @@
 - 🟦 **IBM/mcp-context-forge** — PR #4506: [feat: add React loading page](https://github.com/IBM/mcp-context-forge/pull/4506)
 - 🟦 **NVIDIA/cuda-quantum** — PR #4395: [Fix observe broadcast fallback on REST QPU targets](https://github.com/NVIDIA/cuda-quantum/pull/4395)
 - 🟦 **qualcomm/PatchWise** — PR #78: [Agent: add git tools for AI to navigate commit history](https://github.com/qualcomm/PatchWise/pull/78)
+- 🟦 **pytorch/executorch** — PR #19065: [Enable Gemma 4 on the MLX backend through the HuggingFace export/run path.](https://github.com/pytorch/executorch/pull/19065)
 - 🟦 **qualcomm/eld** — PR #1093: [test: remove unnecessary target exclusions from RevisionInfo](https://github.com/qualcomm/eld/pull/1093)
 - 🟦 **PointCloudLibrary/pcl** — PR #6431: [registration: parallelize SAC-IA error metric with OpenMP](https://github.com/PointCloudLibrary/pcl/pull/6431)
 - 🟦 **microsoft/agent-governance-toolkit** — PR #1209: [docs: add architecture video series links](https://github.com/microsoft/agent-governance-toolkit/pull/1209)
