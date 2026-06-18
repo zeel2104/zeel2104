@@ -41,7 +41,7 @@
 - 🟦 **pytorch-ignite/examples** — PR #97: [Add setup_tb_logging example to getting started tutorial](https://github.com/pytorch-ignite/examples/pull/97)
 - 🟦 **microsoft/apm** — PR #738: [fix: strip skills prefix from bare skill plugin export](https://github.com/microsoft/apm/pull/738)
 - 🟦 **pytorch/ignite** — PR #3737: [Use Ruff formatter in devcontainer config](https://github.com/pytorch/ignite/pull/3737)
-- 🟦 **trustgraph-ai/trustgraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/trustgraph/pull/797)
+- 🟦 **trustgraph-ai/TrustGraph** — PR #797: [Add unit tests for base helper modules](https://github.com/trustgraph-ai/TrustGraph/pull/797)
 - 🟦 **FreeCAD/FreeCAD** — PR #29325: [Sort installed mods list alphabetically](https://github.com/FreeCAD/FreeCAD/pull/29325)
 - 🟦 **apache/datafusion-python** — PR #1489: [Support None comparisons for null expressions](https://github.com/apache/datafusion-python/pull/1489)
 - 🟦 **bitwize-music-studio/claude-ai-music-skills** — PR #262: [Log failed optional module imports in processing helpers](https://github.com/bitwize-music-studio/claude-ai-music-skills/pull/262)
