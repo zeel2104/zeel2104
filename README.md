@@ -26,8 +26,6 @@
 
 ## 🌟 Open Source Contributions
 
-<!-- START OPEN SOURCE LIST -->
-<!-- START OPEN SOURCE LIST -->
 
 <!-- START OPEN SOURCE LIST -->
 - 🟦 **NVIDIA-NeMo/Automodel** — PR #2119: [feat(config): add example YAML linter](https://github.com/NVIDIA-NeMo/Automodel/pull/2119)
