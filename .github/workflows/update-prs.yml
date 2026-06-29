@@ -36,7 +36,7 @@ jobs:
           token = os.getenv("PAT_TOKEN")
           headers = {"Authorization": f"token {token}"} if token else {}
           
-          # Tracking public PR configurations
+          # Tracking public PR configurations (up to 100 entries)
           query = "author:zeel2104 is:pr"
           url = "https://api.github.com/search/issues"
           
@@ -52,20 +52,20 @@ jobs:
               if "pull_request" in item and item.get("state") == "closed":
                   pr_title = item.get("title")
                   pr_url = item.get("html_url")
-                  if "zeel2104/zeel2104" in pr_url:
-                      continue
                   repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
-                  pr_lines.append(f"- [{pr_title}]({pr_url}) in `{repo_name}`")
+                  # Format: - **repo_name**: [pr_title](pr_url)
+                  pr_lines.append(f"- **{repo_name}**: [{pr_title}]({pr_url})")
 
-          # Explicit fallback blocks tracking your framework features if API returns empty
-          if pr_lines:
-              content_to_insert = "\n" + "\n".join(list(set(pr_lines))[:15]) + "\n"
+          # Remove duplicates and sort them so they look neat
+          unique_prs = sorted(list(set(pr_lines)))
+
+          if unique_prs:
+              content_to_insert = "\n" + "\n".join(unique_prs) + "\n"
           else:
               content_to_insert = (
                   "\n"
-                  "- 🚀 Shipped code and production features for **NVIDIA NeMo** (enabled Gemma 4 family configuration pipelines on MLX backend frameworks)\n"
-                  "- ⚙️ Built real-time GNSS signal analytics infrastructure monitoring satellite jamming over 1,000+ framework arrays\n"
-                  "- 🛠️ Merged production logic fixes and model hybrid-cache execution handling across core AI open-source frameworks (vLLM, Microsoft repositories)\n"
+                  "- **NVIDIA-NeMo/Automodel**: Shipped code and production features (enabled Gemma 4 family configuration pipelines on MLX backend frameworks)\n"
+                  "- **vllm-project/vllm**: Merged production logic fixes and model hybrid-cache execution handling across core AI frameworks\n"
               )
 
           with open("README.md", "r", encoding="utf-8") as f:
@@ -78,14 +78,12 @@ jobs:
 
           for line in lines:
               clean_line = line.strip()
-              # Matches the HTML block open tag
               if '<div id="open-source-contributions-start">' in clean_line:
                   inside_block = True
                   start_found = True
                   new_lines.append(line)
                   new_lines.append(content_to_insert)
                   continue
-              # Matches the HTML block close tag
               if '<div id="open-source-contributions-end">' in clean_line:
                   inside_block = False
                   end_found = True
@@ -101,7 +99,7 @@ jobs:
           with open("README.md", "w", encoding="utf-8") as f:
               f.writelines(new_lines)
               
-          print("✅ README forced update complete!")
+          print("✅ README forced update complete with new formatting!")
           END
 
       - name: Commit and push changes
@@ -112,6 +110,6 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes detected to push"
           else
-            git commit -m "⚙️ Update open source contributions list [skip ci]"
+            git commit -m "⚙️ Update open source contributions formatting [skip ci]"
             git push origin main
           fi
