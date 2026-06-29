@@ -69,24 +69,34 @@ jobs:
               )
 
           with open("README.md", "r", encoding="utf-8") as f:
-              readme = f.read()
+              lines = f.readlines()
 
-          # Exact tag anchors
-          start_tag = ""
-          end_tag = ""
-          
-          if start_tag not in readme or end_tag not in readme:
+          new_lines = []
+          inside_block = False
+          start_found = False
+          end_found = False
+
+          for line in lines:
+              if "" in line:
+                  inside_block = True
+                  start_found = True
+                  new_lines.append(line)
+                  new_lines.append(content_to_insert)
+                  continue
+              if "" in line:
+                  inside_block = False
+                  end_found = True
+                  new_lines.append(line)
+                  continue
+              if not inside_block:
+                  new_lines.append(line)
+
+          if not start_found or not end_found:
               print("❌ Placeholder tags not found in README.md")
               exit(1)
 
-          # Split-based insertion to completely bypass re.sub memory errors
-          before = readme.split(start_tag)[0]
-          after = readme.split(end_tag)[1]
-
-          updated_readme = f"{before}{start_tag}{content_to_insert}{end_tag}{after}"
-
           with open("README.md", "w", encoding="utf-8") as f:
-              f.write(updated_readme)
+              f.writelines(new_lines)
               
           print("✅ README forced update complete!")
           END
