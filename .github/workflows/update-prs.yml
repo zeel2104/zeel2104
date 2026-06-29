@@ -1,19 +1,20 @@
 name: Update Open Source Contributions
 
 on:
-  workflow_dispatch:    # Manual trigger
   schedule:
-    - cron: '0 12 * * *'  # Daily at 12:00 UTC
+    - cron: '0 9 * * *' # Runs daily at 9:00 AM UTC
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-
+      contents: write # Grants permission to commit and push changes
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main # Forces the runner to stay on main instead of a detached HEAD
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,53 +22,68 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests
 
       - name: Update README with merged PRs
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-          GITHUB_USERNAME: zeel2104
-          README_PATH: README.md
         run: |
           python - <<'END'
           import os
+          import re
           import requests
 
-          username = os.environ["GITHUB_USERNAME"]
-          readme_path = os.environ["README_PATH"]
-          token = os.environ.get("PAT_TOKEN")
+          token = os.getenv("PAT_TOKEN")
           headers = {"Authorization": f"token {token}"} if token else {}
-
-          # Fetch merged PRs
+          
+          # Query to fetch your merged pull requests across open-source orgs
+          query = "author:zeel2104 is:pr is:merged"
           url = "https://api.github.com/search/issues"
-          query = f"author:{username} is:pr is:merged"
+          
           response = requests.get(url, headers=headers, params={"q": query, "per_page": 100})
+          if response.status_code != 200:
+              print(f"❌ API Error: {response.status_code} - {response.text}")
+              exit(1)
+
           data = response.json()
-
           pr_lines = []
+          
+          print(f"Total items found by API query: {len(data.get('items', []))}")
+
           for item in data.get("items", []):
-              repo_name = item["repository_url"].replace("https://api.github.com/repos/", "")
-              pr_number = item["number"]
-              title = item["title"]
-              html_url = item["html_url"]
-              pr_lines.append(f"- 🟦 **{repo_name}** — PR #{pr_number}: [{title}]({html_url})")
+              pr_title = item.get("title")
+              pr_url = item.get("html_url")
+              # Skip pulling items from your own profile configuration repository
+              if "zeel2104/zeel2104" in pr_url:
+                  continue
+              repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
+              pr_lines.append(f"- [{pr_title}]({pr_url}) in `{repo_name}`")
 
-          # Update README
-          with open(readme_path, "r", encoding="utf-8") as f:
-              content = f.read()
-
-          start_tag = "<!-- START OPEN SOURCE LIST -->"
-          end_tag = "<!-- END OPEN SOURCE LIST -->"
-
-          if start_tag in content and end_tag in content:
-              new_section = start_tag + "\n" + "\n".join(pr_lines) + "\n" + end_tag
-              content = content.split(start_tag)[0] + new_section + content.split(end_tag)[1]
-
-              with open(readme_path, "w", encoding="utf-8") as f:
-                  f.write(content)
-              print("✅ README updated with merged PRs!")
+          # Determine block to insert or apply fallbacks if list is empty
+          if pr_lines:
+              content_to_insert = "\n" + "\n".join(pr_lines) + "\n"
+              print(f"✅ Prepared {len(pr_lines)} open-source contributions.")
           else:
+              content_to_insert = "\n- 🚀 Shipped code and production features across large-scale ecosystems (NVIDIA, vLLM, Microsoft).\n"
+              print("⚠️ No unique PRs found matching the criteria. Using fallback content.")
+
+          # Read and update the README file content
+          with open("README.md", "r", encoding="utf-8") as f:
+              readme = f.read()
+
+          pattern = r"()(.*?)()"
+          
+          if not re.search(pattern, readme, re.DOTALL):
               print("❌ Placeholder tags not found in README.md")
+              exit(1)
+
+          updated_readme = re.sub(pattern, f"\\1{content_to_insert}\\3", readme, flags=re.DOTALL)
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(updated_readme)
+              
+          print("✅ README updated with merged PRs!")
           END
 
       - name: Commit and push changes
@@ -79,5 +95,5 @@ jobs:
             echo "No changes detected to push"
           else
             git commit -m "⚙️ Update open source contributions list [skip ci]"
-            git push origin HEAD:main
+            git push origin main
           fi
