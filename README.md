@@ -1,3 +1,4 @@
+
 ---
 <h1 align="center">Hi 👋, I'm Zeel Desai</h1>
 
@@ -26,6 +27,7 @@
 ## 🌟 Open Source Contributions
 
 <!-- START OPEN SOURCE LIST -->
+
 <!-- END OPEN SOURCE LIST -->
 📌 35+ PRs merged across impactful repositories  
 📌 Focus: **backend reliability, testing, developer tooling**
