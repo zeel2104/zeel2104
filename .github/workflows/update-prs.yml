@@ -47,20 +47,25 @@ jobs:
 
           data = response.json()
           pr_lines = []
+          seen_prs = set()
           
+          # GitHub API returns items sorted by most recent by default
           for item in data.get("items", []):
               if "pull_request" in item and item.get("state") == "closed":
                   pr_title = item.get("title")
                   pr_url = item.get("html_url")
+                  
+                  # Deduplicate while preserving the most recent API order
+                  if pr_url in seen_prs:
+                      continue
+                  seen_prs.add(pr_url)
+                  
                   repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
                   # Format: - **repo_name**: [pr_title](pr_url)
                   pr_lines.append(f"- **{repo_name}**: [{pr_title}]({pr_url})")
 
-          # Remove duplicates and sort them so they look neat
-          unique_prs = sorted(list(set(pr_lines)))
-
-          if unique_prs:
-              content_to_insert = "\n" + "\n".join(unique_prs) + "\n"
+          if pr_lines:
+              content_to_insert = "\n" + "\n".join(pr_lines) + "\n"
           else:
               content_to_insert = (
                   "\n"
@@ -99,7 +104,7 @@ jobs:
           with open("README.md", "w", encoding="utf-8") as f:
               f.writelines(new_lines)
               
-          print("✅ README forced update complete with new formatting!")
+          print("✅ README forced update complete with chronological ordering!")
           END
 
       - name: Commit and push changes
@@ -110,6 +115,6 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes detected to push"
           else
-            git commit -m "⚙️ Update open source contributions formatting [skip ci]"
+            git commit -m "⚙️ Order open source contributions by most recent [skip ci]"
             git push origin main
           fi
