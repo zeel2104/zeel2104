@@ -36,7 +36,7 @@ jobs:
           token = os.getenv("PAT_TOKEN")
           headers = {"Authorization": f"token {token}"} if token else {}
           
-          # Broadened query to track public PR configurations
+          # Tracking public PR configurations
           query = "author:zeel2104 is:pr"
           url = "https://api.github.com/search/issues"
           
@@ -77,13 +77,15 @@ jobs:
           end_found = False
 
           for line in lines:
-              if "" in line:
+              clean_line = line.strip()
+              # Matches the tag regardless of extra spaces or positioning inside the line
+              if "" in clean_line:
                   inside_block = True
                   start_found = True
                   new_lines.append(line)
                   new_lines.append(content_to_insert)
                   continue
-              if "" in line:
+              if "" in clean_line:
                   inside_block = False
                   end_found = True
                   new_lines.append(line)
