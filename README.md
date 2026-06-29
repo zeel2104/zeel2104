@@ -69,13 +69,6 @@
 - **elevchyt/spritelite**: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
 <div id="open-source-contributions-end"></div>
 
-📌 35+ PRs merged across impactful repositories  
-📌 Focus: **backend reliability, testing, developer tooling**
-
----
-
----
-
 ## 🛠️ Tech Stack
 - 💻 Languages: Java, Python, JavaScript  
 - 🌐 Web: React, Node.js, REST APIs  
