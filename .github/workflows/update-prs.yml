@@ -80,4 +80,4 @@ jobs:
           else
             git commit -m "⚙️ Update open source contributions list [skip ci]"
             git push origin HEAD:main
-          |
+          fi
