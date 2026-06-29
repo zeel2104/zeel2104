@@ -78,13 +78,14 @@ jobs:
 
           for line in lines:
               clean_line = line.strip()
-              # Matches the tag regardless of extra spaces or positioning inside the line
+              # Matches the exact start tag
               if "" in clean_line:
                   inside_block = True
                   start_found = True
                   new_lines.append(line)
                   new_lines.append(content_to_insert)
                   continue
+              # Matches the exact end tag
               if "" in clean_line:
                   inside_block = False
                   end_found = True
@@ -92,7 +93,6 @@ jobs:
                   continue
               if not inside_block:
                   new_lines.append(line)
-
           if not start_found or not end_found:
               print("❌ Placeholder tags not found in README.md")
               exit(1)
