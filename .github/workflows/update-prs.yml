@@ -37,53 +37,55 @@ jobs:
           token = os.getenv("PAT_TOKEN")
           headers = {"Authorization": f"token {token}"} if token else {}
           
-          # Query to fetch your merged pull requests across open-source orgs
-          query = "author:zeel2104 is:pr is:merged"
+          # Broadened query to track public PR configurations
+          query = "author:zeel2104 is:pr"
           url = "https://api.github.com/search/issues"
           
           response = requests.get(url, headers=headers, params={"q": query, "per_page": 100})
           if response.status_code != 200:
-              print(f"❌ API Error: {response.status_code} - {response.text}")
+              print(f"❌ API Error: {response.status_code}")
               exit(1)
 
           data = response.json()
           pr_lines = []
           
-          print(f"Total items found by API query: {len(data.get('items', []))}")
-
           for item in data.get("items", []):
-              pr_title = item.get("title")
-              pr_url = item.get("html_url")
-              # Skip pulling items from your own profile configuration repository
-              if "zeel2104/zeel2104" in pr_url:
-                  continue
-              repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
-              pr_lines.append(f"- [{pr_title}]({pr_url}) in `{repo_name}`")
+              if "pull_request" in item and item.get("state") == "closed":
+                  pr_title = item.get("title")
+                  pr_url = item.get("html_url")
+                  if "zeel2104/zeel2104" in pr_url:
+                      continue
+                  repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
+                  pr_lines.append(f"- [{pr_title}]({pr_url}) in `{repo_name}`")
 
-          # Determine block to insert or apply fallbacks if list is empty
+          # Explicit fallback blocks tracking your framework features
           if pr_lines:
-              content_to_insert = "\n" + "\n".join(pr_lines) + "\n"
-              print(f"✅ Prepared {len(pr_lines)} open-source contributions.")
+              content_to_insert = "\n" + "\n".join(list(set(pr_lines))[:15]) + "\n"
           else:
-              content_to_insert = "\n- 🚀 Shipped code and production features across large-scale ecosystems (NVIDIA, vLLM, Microsoft).\n"
-              print("⚠️ No unique PRs found matching the criteria. Using fallback content.")
+              content_to_insert = (
+                  "\n"
+                  "- 🚀 Shipped code and production features for **NVIDIA NeMo** (enabled Gemma 4 family configuration pipelines on MLX backend frameworks)\n"
+                  "- ⚙️ Built real-time GNSS signal analytics infrastructure monitoring satellite jamming over 1,000+ framework arrays\n"
+                  "- 🛠️ Merged production logic fixes and model hybrid-cache execution handling across core AI open-source frameworks (vLLM, Microsoft repositories)\n"
+              )
 
-          # Read and update the README file content
           with open("README.md", "r", encoding="utf-8") as f:
               readme = f.read()
 
-          pattern = r"()(.*?)()"
+          # Catches the tags regardless of newlines or block configurations
+          pattern = r"(.*?)"
           
           if not re.search(pattern, readme, re.DOTALL):
               print("❌ Placeholder tags not found in README.md")
               exit(1)
 
-          updated_readme = re.sub(pattern, f"\\1{content_to_insert}\\3", readme, flags=re.DOTALL)
+          replacement = f"{content_to_insert}"
+          updated_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
 
           with open("README.md", "w", encoding="utf-8") as f:
               f.write(updated_readme)
               
-          print("✅ README updated with merged PRs!")
+          print("✅ README forced update complete!")
           END
 
       - name: Commit and push changes
