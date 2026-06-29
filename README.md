@@ -18,6 +18,22 @@
 ## 🌟 Open Source Contributions
 
 <div id="open-source-contributions-start"></div>
+
+- [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563) in `ClanGenOfficial/clangen`
+- [Add RabbitMQ monitoring scenario](https://github.com/grafana/alloy-scenarios/pull/120) in `grafana/alloy-scenarios`
+- [feat(config): add example YAML linter](https://github.com/NVIDIA-NeMo/Automodel/pull/2119) in `NVIDIA-NeMo/Automodel`
+- [docs: add SkyPilot Kubernetes tutorial](https://github.com/NVIDIA-NeMo/Automodel/pull/1667) in `NVIDIA-NeMo/Automodel`
+- [UI rewrite loading page](https://github.com/IBM/mcp-context-forge/pull/4472) in `IBM/mcp-context-forge`
+- [Use modules list for sequential epoch end](https://github.com/vllm-project/llm-compressor/pull/2682) in `vllm-project/llm-compressor`
+- [docs: add multi-tool agent tutorial](https://github.com/intuit/stunt-double/pull/46) in `intuit/stunt-double`
+- [Enable Gemma 4 on the MLX backend through the HuggingFace export/run path.](https://github.com/pytorch/executorch/pull/19065) in `pytorch/executorch`
+- [Add Discord webhook support to monitor](https://github.com/hidai25/eval-view/pull/147) in `hidai25/eval-view`
+- [Feature Request: Add Feishu Interactive Card Parsing support #48281 ](https://github.com/openclaw/openclaw/pull/56795) in `openclaw/openclaw`
+- [Add setup_tb_logging example to getting started tutorial](https://github.com/pytorch-ignite/examples/pull/97) in `pytorch-ignite/examples`
+- [docs: clarify NIXL KV transfer metrics aggregation](https://github.com/vllm-project/vllm/pull/41259) in `vllm-project/vllm`
+- [Docs setup tb logger getting started](https://github.com/pytorch/ignite/pull/3738) in `pytorch/ignite`
+- [Make simulator version objects more useful](https://github.com/cocotb/cocotb/pull/5530) in `cocotb/cocotb`
+- [fix: strip skills prefix from bare skill plugin export](https://github.com/microsoft/apm/pull/738) in `microsoft/apm`
 <div id="open-source-contributions-end"></div>
 
 📌 35+ PRs merged across impactful repositories  
