@@ -31,7 +31,6 @@ jobs:
         run: |
           python - <<'END'
           import os
-          import re
           import requests
 
           token = os.getenv("PAT_TOKEN")
@@ -58,7 +57,7 @@ jobs:
                   repo_name = pr_url.split("https://github.com/")[1].split("/pull/")[0]
                   pr_lines.append(f"- [{pr_title}]({pr_url}) in `{repo_name}`")
 
-          # Explicit fallback blocks tracking your framework features
+          # Explicit fallback blocks tracking your framework features if API returns empty
           if pr_lines:
               content_to_insert = "\n" + "\n".join(list(set(pr_lines))[:15]) + "\n"
           else:
@@ -72,15 +71,19 @@ jobs:
           with open("README.md", "r", encoding="utf-8") as f:
               readme = f.read()
 
-          # Catches the tags regardless of newlines or block configurations
-          pattern = r"(.*?)"
+          # Exact tag anchors
+          start_tag = ""
+          end_tag = ""
           
-          if not re.search(pattern, readme, re.DOTALL):
+          if start_tag not in readme or end_tag not in readme:
               print("❌ Placeholder tags not found in README.md")
               exit(1)
 
-          replacement = f"{content_to_insert}"
-          updated_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+          # Split-based insertion to completely bypass re.sub memory errors
+          before = readme.split(start_tag)[0]
+          after = readme.split(end_tag)[1]
+
+          updated_readme = f"{before}{start_tag}{content_to_insert}{end_tag}{after}"
 
           with open("README.md", "w", encoding="utf-8") as f:
               f.write(updated_readme)
