@@ -64,6 +64,7 @@
 - **SasanLabs/VulnerableApp**: [fix: add ping to Docker base image to fix Command Injection levels  (#540)](https://github.com/SasanLabs/VulnerableApp/pull/541)
 - **microsoft/agent-governance-toolkit**: [feat: add policy evaluation heatmap to SRE dashboard (#309)](https://github.com/microsoft/agent-governance-toolkit/pull/326)
 - **AARyzhkov/sauna**: [Add Python type annotations to all modules (#8)](https://github.com/AARyzhkov/sauna/pull/9)
+- **pypsa-meets-earth/pypsa-earth**: [docs: add plotting & summary visualization page (#1751)](https://github.com/pypsa-meets-earth/pypsa-earth/pull/1765)
 - **AcademySoftwareFoundation/MaterialX**: [Fix blackbody node to support temperatures down to 800K](https://github.com/AcademySoftwareFoundation/MaterialX/pull/2831)
 - **ClanGenOfficial/clangen**: [[BUGFIX] Add missing trait constraint to strange_not_kittypet thought…](https://github.com/ClanGenOfficial/clangen/pull/4563)
 - **elevchyt/spritelite**: [Add Alt+Backspace fill layer with foreground color](https://github.com/elevchyt/spritelite/pull/7)
