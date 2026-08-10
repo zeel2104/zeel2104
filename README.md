@@ -25,6 +25,7 @@
 
 <div id="open-source-contributions-start"></div>
 
+- **intel/auto-round**: [feat: add per-head fp8 kv attention calibration](https://github.com/intel/auto-round/pull/2044)
 - **NVIDIA-NeMo/Automodel**: [feat(config): add example YAML linter](https://github.com/NVIDIA-NeMo/Automodel/pull/2119)
 - **vllm-project/llm-compressor**: [Use modules list for sequential epoch end](https://github.com/vllm-project/llm-compressor/pull/2682)
 - **grafana/alloy-scenarios**: [Add RabbitMQ monitoring scenario](https://github.com/grafana/alloy-scenarios/pull/120)
